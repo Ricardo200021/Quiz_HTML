@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dark Screen: exercícios</title>
+</head>
+
+<body>
+    <div class="containerMain">
+        <h1>DS: Teste sua memória</h1><br><br>
+
+        <div class="container">
+
+            1. Quem foi o fundador do HTML?
+            <hr><br>
+            <input type="radio" name="question1"> Hakon Wium Lie<br>
+            <input type="radio" name="question1" id="correta1"> Tim Beners-Lee<br>
+            <input type="radio" name="question1"> Bert Bos<br>
+            <input type="radio" name="question1"> Steve Jobs<br><br>
+            <button class="next" onclick="next(1)">Next</button>
+        </div>
+
+        <div class="container">
+
+            2. Para que serve a identação?
+            <hr><br>
+            <input type="radio" name="question2" id="correta2"> Melhor Legibilidade<br>
+            <input type="radio" name="question2"> Criar condiçoes<br>
+            <input type="radio" name="question2"> Criar um titulo<br>
+            <input type="radio" name="question2"> Colocar uma nova extensão<br><br>
+            <button class="next" onclick="next(2)">Next</button>
+        </div>
+
+        <div class="container">
+
+            3. O que é colocado como parâmetro no atributo "src" da tag img?
+            <hr><br>
+            <input type="radio" name="question3"> Apenas números<br>
+            <input type="radio" name="question3"> Tags de imagens<br>
+            <input type="radio" name="question3" id="correta3"> Caminho da imagem<br>
+            <input type="radio" name="question3"> Nome da imagem<br><br>
+            <button class="next" onclick="next(3)">Next</button>
+        </div>
+
+        <div class="container">
+
+            4. Qual a função da tag "a"?
+            <hr><br>
+            <input type="radio" name="question4"> Deixar palavras em negrito<br>
+            <input type="radio" name="question4"> Colocar uma linha horizontal na página<br>
+            <input type="radio" name="question4"> Abre o site em uma segunda Aba<br>
+            <input type="radio" name="question4" id="correta4"> Faz o link entre as páginas<br><br>
+            <button class="next" onclick="next(4)">Next</button>
+        </div>
+
+        <div class="container">
+
+            5. Para criar uma lista ordenada eu uso a tag?
+            <hr><br>
+            <input type="radio" name="question5"> br<br>
+            <input type="radio" name="question5"> li<br>
+            <input type="radio" name="question5"> ul<br>
+            <input type="radio" name="question5" id="correta5"> ol<br><br>
+            <button class="next" onclick="next(5)">Next</button>
+        </div>
+
+        <div class="container">
+
+            6. Quais são as três maneiras de acrescentar CSS em um código HTML?
+            <hr><br>
+            <input type="radio" name="question6"> usando as tags: br,ul,hr<br>
+            <input type="radio" name="question6"> usando comentarios<br>
+            <input type="radio" name="question6" id="correta6"> inline,interno,externo<br>
+            <input type="radio" name="question6"> com as tags: a,img,p<br><br>
+            <button class="next" onclick="next(6)">Next</button>
+        </div>
+
+        <div class="container">
+
+            7. Quais são as três formas de colocar cores no css?
+            <hr><br>
+            <input type="radio" name="question7"> div,ol,hr<br>
+            <input type="radio" name="question7" id="correta7">RGB,Hexadecimal,nome da cor em inglês<br>
+            <input type="radio" name="question7"> hexadecimal, link, meta<br>
+            <input type="radio" name="question7"> RGB, div, li<br><br>
+            <button class="next" onclick="next(7)">Next</button>
+        </div>
+
+        <div class="container">
+
+            8. Qual o nome da borda pontilhada?
+            <hr><br>
+            <input type="radio" name="question8"> groove<br>
+            <input type="radio" name="question8"> solid<br>
+            <input type="radio" name="question8"> double<br>
+            <input type="radio" name="question8" id="correta8">dotted<br><br>
+            <button class="next" onclick="next(8)">Next</button>
+        </div>
+
+        <div class="container">
+
+            9. Qual parâmetro herda valores de um elemento pai?
+            <hr><br>
+            <input type="radio" name="question9" id="correta9">inherit<br>
+            <input type="radio" name="question9"> dashed<br>
+            <input type="radio" name="question9"> box-sizing<br>
+            <input type="radio" name="question9"> class<br><br>
+            <button onclick="result()">Pontuação</button>
+        </div>
+    </div>
+
+    <div class="bannerTop">
+        <img src="assets/banner.jpg" alt="">
+    </div>
+    <audio class="musica" src="assets/musicaParaEstudar.mp3" controls autoplay></audio>
+
+    <script>
+        //exibindo o primeiro bloco de pergunta
+        document.getElementsByClassName('container')[0].style.display = "block";
+
+        //Definir a função next
+        function next(id) {
+            document.getElementsByClassName('container')[id - 1].style.display = "none";
+            document.getElementsByClassName('container')[id].style.display = "block";
+        }
+
+        //Mostrando o resultado final
+        function result() {
+            var score = 0;
+            if (document.getElementById('correta1').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta2').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta3').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta4').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta5').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta6').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta7').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta8').checked) {
+                score++;
+            }
+
+            if (document.getElementById('correta9').checked) {
+                score++;
+            }
+
+            alert("Você acertou: " + score + " das 9 questões.");
+        }
+    </script>
+</body>
+
+</html>
